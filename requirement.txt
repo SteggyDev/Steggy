@@ -1,0 +1,10 @@
+pymupdf
+Flask
+Werkzeug
+librosa
+numpy
+scipy
+soundfile
+matplotlib
+Pillow
+pillow

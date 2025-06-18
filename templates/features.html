@@ -1,0 +1,18 @@
+<section id="features" class="our-features">
+    <h2>OUR FEATURES</h2>
+    <div class="features-grid">
+        <div class="feature-button" data-tool="steganography">STEGHIDE</div>
+        <div class="feature-button" data-tool="stegoveritas">STEGOVERITAS</div>
+        <div class="feature-button" data-tool="foremost">FOREMOST</div>
+        <div class="feature-button" data-tool="exiftool">EXIFTOOL METADATA</div>
+        <div class="feature-button" data-tool="pdf">PDF EXTRACT</div>
+        <div class="feature-button" data-tool="audiospectogram">AUDIO SPECTOGRAM</div>
+    </div>
+    {% include 'features/steghide.html' %}
+    {% include 'features/stegoveritas.html' %}
+    {% include 'features/foremost.html' %}
+    {% include 'features/pdfextract.html' %}
+    {% include 'features/exiftool.html' %}
+    {% include 'features/audiospectogram.html' %}
+    <div id="result-message"></div>
+</section>

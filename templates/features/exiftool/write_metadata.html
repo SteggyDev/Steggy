@@ -1,0 +1,67 @@
+<form id="write-metadata-content" class="tool-content" action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="action" value="Write Metadata">
+
+    <div class="upload-panel">
+        <h2>UPLOAD FILE TO MODIFY METADATA</h2>
+        <label for="write-file-upload" class="file-drop-area">
+            <img src="{{ url_for('static', filename='upload.png') }}" alt="Drag n Drop Icon">
+            <p>Drag n' Drop Support<br>file type: .jpg, .jpeg, .png, etc</p>
+            <input id="write-file-upload" type="file" name="file">
+        </label>
+    </div>
+
+    <div class="options-panel">
+        <h2>CHOOSE ACTION AND PROVIDE DETAILS</h2>
+
+        <div class="form-group">
+            <label for="write-action-selector">Select Action</label>
+            <select id="write-action-selector" name="write_action" class="styled-select">
+                <option value="write-tag" selected>Write or Modify Tag</option>
+                <option value="delete-one-tag">Delete One Tag</option>
+                <option value="delete-all-tags">Delete All Tags</option>
+                <option value="copy-tag">Copy Tag</option>
+            </select>
+        </div>
+
+        <div id="action-write-tag" class="action-panel">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="tag-name">Tag Name</label>
+                    <input type="text" name="tag_name" placeholder="e.g., ImageDescription, Artist">
+                </div>
+                <div class="form-group">
+                    <label for="tag-value">Tag Value</label>
+                    <input type="text" name="tag_value" placeholder="e.g., A beautiful sunset">
+                </div>
+            </div>
+        </div>
+
+        <div id="action-delete-one-tag" class="action-panel" style="display: none;">
+            <div class="form-group">
+                <label for="tag-to-delete">Tag Name to Delete</label>
+                <input type="text" name="tag_to_delete" placeholder="e.g., Comment">
+            </div>
+        </div>
+        
+        <div id="action-delete-all-tags" class="action-panel" style="display: none;">
+            <p class="warning-text"><strong>Warning:</strong> This will remove ALL metadata from the file.</p>
+        </div>
+        
+        <div id="action-copy-tag" class="action-panel" style="display: none;">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="source-tag">Source Tag</label>
+                    <input type="text" name="source_tag" placeholder="e.g., CreateDate">
+                </div>
+                <div class="form-group">
+                    <label for="dest-tag">Destination Tag</label>
+                    <input type="text" name="dest_tag" placeholder="e.g., DateTimeOriginal">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contentButton-panel" style="margin-top: 25px;">
+        <button type="submit" class="button">MODIFY AND DOWNLOAD</button>
+    </div>
+</form>

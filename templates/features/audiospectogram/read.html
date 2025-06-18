@@ -1,0 +1,46 @@
+<div>
+    <form action="/upload" class="tool-content" id="audioread-content" enctype="multipart/form-data" method="POST">
+        <div class="upload-panel">
+            <h2>UPLOAD AUDIO</h2>
+            <input type="hidden" name="action" value="AudioSpectrogramRead">
+            <div class="file-drop-area">
+                <img src="{{ url_for('static', filename='upload.png') }}" alt="Drag n Drop Icon">
+                <p>Drag n' Drop Support<br>File type: .wav</p>
+                <input type="file" id="upload-audio" name="file" accept=".wav" required>
+            </div>
+        </div>
+
+        <div class="contentButton-panel">
+            <button type="submit" class="button">CONVERT TO SPECTROGRAM</button>
+        </div>
+    </form>
+
+    <div id="readResult" class="result-container" style="display:none;">
+        <img id="decodedImage" alt="Spectrogram Image">
+    </div>
+
+    <script>
+        document.getElementById("audioread-content").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            const response = await fetch("/upload", {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.image) {
+                document.getElementById("decodedImage").src = result.image;
+                document.getElementById("readResult").style.display = "block";
+            } else if (result.error) {
+                alert("Error: " + result.error);
+            } else {
+                alert("Unexpected response.");
+            }
+        });
+    </script>
+</div>

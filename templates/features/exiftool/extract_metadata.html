@@ -1,0 +1,19 @@
+<form id="extract-metadata-content" class="tool-content active" action="/upload" method="POST" enctype="multipart/form-data">
+    
+    <input type="hidden" name="action" value="Extract Metadata">
+
+    <div class="upload-panel">
+      <h2>UPLOAD YOUR FILE TO EXTRACT METADATA</h2>
+      
+      <label for="exiftool-upload-input" class="file-drop-area">
+        <img src="{{ url_for('static', filename='upload.png') }}" alt="Drag n Drop Icon">
+        <p>Drag n' Drop Support<br>file type: .jpg, .jpeg, .png, etc</p>
+        <input id="exiftool-upload-input" type="file" name="file">
+      </label>
+    </div>
+    
+    <div class="contentButton-panel" style="margin-top: 25px;">
+        <button type="submit" class="button">EXTRACT</button>
+    </div>
+
+</form>

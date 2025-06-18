@@ -1,0 +1,700 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #212121;
+    color: #fff;
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #a4f9b3;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px 24px 24px;
+}
+
+/* NAVIGATION */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    padding: 18px 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.nav-logo-text {
+    background: linear-gradient(90deg, #86d9db, #a4f9b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-links a:hover {
+    background: #232323;
+    color: #a4f9b3;
+}
+
+/* HERO SECTION */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0 40px 0;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+    min-width: 320px;
+}
+
+.hero-logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 320px;
+}
+
+.hero-logo img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 10vw, 120px);
+    background: linear-gradient(90deg, green, cyan, blue, #00ff5e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 16px;
+    text-align: center;
+    width: 100%;
+    background-size: 300% 100%;
+    animation: rainbowAnimation 3s linear infinite;
+    letter-spacing: -2px;
+}
+
+@keyframes rainbowAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.hero p {
+    font-size: 20px;
+    color: #e0e0e0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 24px;
+}
+
+/* WHY SECTION */
+.why > h2,
+.our-features > h2,
+.contact > h2 {
+    font-size: clamp(36px, 7vw, 80px);
+    color: #fff;
+    margin-bottom: 36px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 30px;
+    font-weight: 600;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    padding: 8px 18px;
+}
+
+.feature-item:nth-child(1) { color: #ff5c5c; }
+.feature-item:nth-child(2) { color: #5c7eff; }
+.feature-item:nth-child(3) { color: #ffa35c; }
+.feature-item:nth-child(4) { color: #5cff7b; }
+
+/* FEATURES GRID */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.feature-button {
+    background: linear-gradient(90deg, #a4f9b3 60%, #6bafa5 100%);
+    color: #121212;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 0;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(164, 249, 179, 0.08);
+}
+
+.feature-button:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 24px rgba(164, 249, 179, 0.18);
+}
+
+/* CONTACT SECTION */
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact p,
+.contact a {
+    font-size: 22px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    text-align: center;
+    display: block;
+}
+
+.contact a {
+    color: #a4f9b3;
+    font-style: italic;
+    transition: color 0.2s;
+}
+
+.contact a:hover {
+    color: #5c7eff;
+}
+
+/* TOOL CONTAINER & TABS */
+.tool-container {
+    background: #232323;
+    border-radius: 18px;
+    padding: 40px 32px;
+    margin: 40px auto 0 auto;
+    display: none;
+    min-height: 400px;
+    max-width: 900px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+}
+
+.tool-container.active {
+    display: block;
+}
+
+.tool-tabs {
+    display: flex;
+    justify-content: stretch;
+    gap: 0;
+    margin-bottom: 24px;
+}
+
+.tool-tab {
+    flex: 1 1 0;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 20px;
+    background: #6bafa5;
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.tool-tab:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.tool-tab:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+.tool-tab.active {
+    background: #a4f9b3;
+    color: #121212;
+}
+
+.tool-content {
+    display: none;
+    min-height: 400px;
+}
+
+.tool-content.active {
+    display: block;
+}
+
+/* DUAL UPLOAD */
+.dual-upload-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+    align-items: stretch; /* Make both panels same height */
+}
+
+.upload-panel {
+    flex: 1 1 320px;
+    background: #fffdf7;
+    border-radius: 18px;
+    padding: 32px 24px;
+    text-align: center;
+    max-width: 450px;
+    min-width: 320px;
+    min-height: 340px; /* Set a fixed height */
+    margin: 0 auto;
+    box-shadow: 0 4px 24px rgba(164, 249, 179, 0.10);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1.5px solid #e0e0e0;
+}
+
+.upload-panel h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+    color: #121212;
+}
+
+/* FILE DROP AREA */
+.file-drop-area {
+    background: linear-gradient(120deg, #a4f9b3 60%, #6bafa5 100%);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 100%;
+    color: #121212;
+    cursor: pointer;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    border: 2.5px dashed #6bafa5;
+    box-shadow: 0 2px 12px rgba(164, 249, 179, 0.10);
+}
+
+.file-drop-area:hover {
+    box-shadow: 0 8px 32px rgba(164, 249, 179, 0.18);
+    border-color: #a4f9b3;
+    background: linear-gradient(120deg, #6bafa5 60%, #a4f9b3 100%);
+}
+
+.file-drop-area img {
+    margin-bottom: 12px;
+    width: 72px;
+    opacity: 0.85;
+}
+
+.file-drop-area p {
+    color: #121212;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Make file-drop-area fill the upload-panel width */
+.upload-panel .file-drop-area {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 18px 0;
+    box-sizing: border-box;
+}
+
+/* INPUTS & GROUPS */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #232323;
+    font-weight: 600;
+}
+
+.input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 7px;
+    background: #333;
+    border: 1px solid #6bafa5;
+    color: #fff;
+    font-size: 16px;
+    min-height: 120px;
+    resize: vertical;
+}
+
+.input-group input[type="file"] {
+    display: none;
+}
+
+/* PASSWORD SECTION */
+.password-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px;
+    border-radius: 10px;
+    background: #f5f0e8;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.password-section label {
+    color: #121212;
+    font-weight: bold;
+}
+
+.password-inputs {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.password-inputs input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #6bafa5;
+    color: #121212;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+}
+
+.password-icon img {
+    width: 48px;
+}
+
+/* USE KEY */
+.use-key-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.use-key-label {
+    display: flex;
+    align-items: center;
+    background: #d9d9d9;
+    padding: 10px 18px;
+    border-radius: 8px;
+    min-width: 120px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+.use-key-label input {
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+/* RESULT */
+.result-container {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.result-container img {
+    max-width: 100%;
+    margin-top: 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+/* MESSAGE BOX */
+/* Make the message box container match upload-panel style */
+#message-text1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 12px 0 0 0;
+    border-radius: 10px;
+    padding: 18px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    border: 1px solid #6bafa5;
+    background: #fffdf7;
+    color: #121212;
+    box-sizing: border-box;
+    min-height: 120px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/* If you have a wrapper for the message box, style it like upload-panel */
+#message-panel, .message-panel {
+    background: #fffdf7;
+    border-radius: 18px;
+    padding: 32px 24px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 0 24px 0;
+    box-shadow: 0 4px 24px rgba(164, 249, 179, 0.10);
+    border: 1.5px solid #e0e0e0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* CHECKBOX GROUP */
+.checkbox-group1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* FILE UPLOAD CONTAINER */
+#file-upload-container {
+    display: none;
+    width: 100%;
+    max-width: 420px;
+    margin: 18px auto 0 auto;
+}
+
+/* EXTRACT EMBED PANEL */
+.contentButton-panel {
+    background: #f5f0e8;
+    border-radius: 15px;
+    padding: 22px;
+    text-align: center;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: block;
+}
+
+/* BUTTONS */
+.button {
+    width: 100%;
+    background: linear-gradient(90deg, #6bafa5 60%, #a4f9b3 100%);
+    color: #121212;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 18px 0;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    display: block;
+    margin: 16px 0 0 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+.button:hover,
+form .button:hover,
+form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #a4f9b3 60%, #6bafa5 100%);
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 6px 24px rgba(164, 249, 179, 0.18);
+}
+
+/* Make the EMBED button full width */
+form .button,
+form button[type="submit"] {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 12px 0 0 0; /* Reduced top margin */
+    box-sizing: border-box;
+}
+
+/* Force the EMBED button to fill the tool-content width */
+.tool-content .button,
+.tool-content button[type="submit"] {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+/* Remove centering from parent if present */
+form,
+.tool-content form {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+/* Make tool-content/form a fixed width and center it */
+.tool-content,
+.tool-content form {
+    width: 800px;
+    max-width: 98vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Make single upload panel stretch to full width of the form */
+.tool-content > .upload-panel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 0 24px 0;
+    box-sizing: border-box;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .container {
+        padding: 40px 8px 8px 8px;
+    }
+    .hero {
+        flex-direction: column;
+        gap: 32px;
+    }
+    .dual-upload-container {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    .tool-content,
+    .tool-content form {
+        width: 98vw;
+        min-width: 0;
+        padding: 0;
+    }
+    .upload-panel {
+        min-width: 0;
+        max-width: 100%;
+        padding: 18px 6px;
+    }
+    #message-panel, .message-panel, #message-text1 {
+        max-width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .nav-links {
+        gap: 18px;
+    }
+    .hero h1,
+    .why h2,
+    .our-features h2,
+    .contact h2 {
+        font-size: 36px;
+    }
+    .upload-panel,
+    #message-text1,
+    .file-drop-area,
+    .contentButton-panel {
+        max-width: 98vw;
+        padding: 12px;
+    }
+}
+
+.result-container {
+  background-color: #f5f0e8; 
+  width: 100%;              
+  padding: 20px;            
+  border-radius: 12px;      
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-sizing: border-box;       
+  margin-top: 20px;
+}

@@ -1,0 +1,45 @@
+<form action="/upload" class="tool-content" id="embedpdf-content" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="action" value="EmbedPDF">
+    <div id="upload-container" class="dual-upload-container">
+        <div class="upload-panel" id="secret-file-panel">
+            <h2>UPLOAD SECRET FILE</h2>
+            <div class="file-drop-area">
+                <img src="{{ url_for('static', filename='upload.png') }}" alt="Drag n Drop Icon">
+                <p>Drag n' Drop Support<br>file type: .jpg, .jpeg, .gif, .au, .wav, .bmp</p>
+                <input type="file" id="secret-file" name="file2" accept=".jpg,.jpeg,.gif,.au,.wav,.bmp">
+            </div>
+        </div>
+        <div class="upload-panel">
+            <h2>UPLOAD PUBLIC FILE</h2>
+            <div class="file-drop-area">
+                <img src="{{ url_for('static', filename='upload.png') }}" alt="Drag n Drop Icon">
+                <p>Drag n' Drop Support<br>file type: .pdf</p>
+                <input type="file" id="public-file" name="file1" accept=".pdf" required>
+            </div>
+        </div>
+    </div>    
+    
+    <div class="checkbox-group" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 15px 0;">
+        <label class="styled-checkbox">
+            <input type="checkbox" id="use-message-checkbox" name="use_msg">
+            <span class="checkbox-custom"></span>
+            <span>Use Message</span>
+        </label>
+        <label class="styled-checkbox">
+            <input type="checkbox" id="use-key-checkbox" name="use_key">
+            <span class="checkbox-custom"></span>
+            <span>Use Key</span>
+        </label>
+    </div>
+    
+    <textarea name="message" id="message-text" placeholder="Enter Your Message Here" rows="2" 
+    style="width: 100%; margin: 15px 0; border-radius: 10px; padding: 10px; display: none;"></textarea>
+    
+    <div id="password-fields" style="width: 100%; margin: 15px 0; border-radius: 10px; padding: 10px; display: none; background: #f9f9f9;">
+        <input type="password" name="key" id="password-input" placeholder="Enter Key" style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
+    </div>
+    
+    <div class="contentButton-panel">
+        <button type="submit" class="button">EMBED</button>
+    </div>
+</form>

@@ -1,0 +1,65 @@
+<div>    
+    <form action="/upload" class="tool-content" id="audiowrite-content" enctype="multipart/form-data" method="POST">
+        <input type="hidden" name="action" value="AudioSpectrogramWrite">
+        <div class="upload-panel"> 
+            <div class="input-group">
+                <h2>SECRET TEXT</h2>
+                <textarea name="text" placeholder="Enter your secret message" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Base Width</label>
+                <input type="number" name="base_width" value="512" required>
+            </div>
+
+            <div class="input-group">
+                <label>Height</label>
+                <input type="number" name="height" value="256" required>
+            </div>
+
+            <div class="input-group">
+                <label>Max Font Size</label>
+                <input type="number" name="max_font_size" value="80" required>
+            </div>
+
+            <div class="input-group">
+                <label>Margin</label>
+                <input type="number" name="margin" value="10" required>
+            </div>
+
+            <div class="input-group">
+                <label>Letter Spacing</label>
+                <input type="number" name="letter_spacing" value="5" required>
+            </div>
+        </div>
+        
+        <div class="contentButton-panel">
+            <button type="submit" class="button">GENERATE AUDIO & SPECTOGRAM</button>
+        </div>
+
+        <div id="writeResult" class="result-container" style="display:none;">
+            <audio id="audioPreview" controls></audio>
+            <img id="spectrogramPreview" alt="Spectrogram Image">
+        </div>
+    </form>
+
+    <script>
+        document.getElementById("audiowrite-content").addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+
+            const response = await fetch("/upload", {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.json();
+            if (result.audio && result.image) {
+                document.getElementById("audioPreview").src = result.audio;
+                document.getElementById("spectrogramPreview").src = result.image;
+                document.getElementById("writeResult").style.display = "block";
+            }
+        });
+    </script>
+</div>

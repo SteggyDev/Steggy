@@ -1,0 +1,27 @@
+<form action="/upload" class="tool-content" id="fore-content" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="action" value="Foremost">
+    <div class="upload-panel">
+        <h2>UPLOAD STEGO FILE</h2>
+        <div class="file-drop-area">
+            <img src="{{ url_for('static', filename='upload.png') }}" alt="Drag n Drop Icon">
+            <p>Drag n' Drop Support<br>file type: .jpg, .jpeg, .gif, .au, .wav, .bmp</p>
+            <input type="file" id="stego-file" name="file1" accept=".jpg,.jpeg,.gif,.au,.wav,.bmp">
+        </div>
+    </div>
+    
+    <div class="checkbox-group" style="display: flex; justify-content: flex-start; align-items: center; margin: 15px 0; gap: 10px;">
+        <label class="styled-checkbox">
+            <input type="checkbox" id="decode-use-key-checkbox" name="use_key">
+            <span class="checkbox-custom"></span>
+            <span>Use Key</span>
+        </label>
+    </div>
+    
+    <div id="decode-password-fields" style="width: 100%; margin: 15px 0; border-radius: 10px; padding: 10px; display: none; background: #f9f9f9;">
+        <input type="password" name="key" id="decode-password-input" placeholder="Enter Key" style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
+    </div>
+    
+    <div class="contentButton-panel">
+        <button type="submit" class="button">FOREMOST</button>
+    </div>
+</form>
