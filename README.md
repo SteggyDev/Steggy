@@ -58,19 +58,12 @@ Build Steggy from the source and install dependencies:
     ❯ git clone https://github.com/unknownman77/Steggy
     ```
 
-2. **Navigate to the project directory:**
+2. **Navigate and Install the dependencies:**
 
     ```sh
     ❯ cd Steggy
+    ❯ pip install -r requirement.txt
     ```
-
-3. **Install the dependencies:**
-
-**Using [docker](https://www.docker.com/):**
-
-```sh
-❯ pip install -r requirement.txt
-```
 
 ### Usage
 
