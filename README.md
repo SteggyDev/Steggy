@@ -146,6 +146,7 @@ Thank you very much to these awesome people:
 - [hazy](https://github.com/hazy0189)
 - [notCarrot](https://github.com/0xjnz)
 - [SushiMaker1](https://github.com/SushiMaker1)
+- [richmontato](https://github.com/richmontato)
 
 
 <div align="left"><a href="#top">⬆ Return</a></div>
