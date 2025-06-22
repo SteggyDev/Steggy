@@ -55,7 +55,7 @@ Build Steggy from the source and install dependencies:
 1. **Clone the repository:**
 
     ```sh
-    ❯ git clone https://github.com/unknownman77/Steggy
+    ❯ git clone https://github.com/SteggyDev/Steggy
     ```
 
 2. **Navigate and Install the dependencies:**
@@ -91,9 +91,9 @@ Run the bash:
 
 ## Contributing
 
-- **💬 [Join the Discussions](https://github.com/unknownman77/Steggy/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://github.com/unknownman77/Steggy/issues)**: Submit bugs found or log feature requests for the `Steggy` project.
-- **💡 [Submit Pull Requests](https://github.com/unknownman77/Steggy/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **💬 [Join the Discussions](https://github.com/SteggyDev/Steggy/discussions)**: Share your insights, provide feedback, or ask questions.
+- **🐛 [Report Issues](https://github.com/SteggyDev/Steggy/issues)**: Submit bugs found or log feature requests for the `Steggy` project.
+- **💡 [Submit Pull Requests](https://github.com/SteggyDev/Steggy/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
 
 <details closed>
 <summary>Contributing Guidelines</summary>
@@ -101,7 +101,7 @@ Run the bash:
 1. **Fork the Repository**: Start by forking the project repository to your github account.
 2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
    ```sh
-   git clone https://github.com/unknownman77/Steggy
+   git clone https://github.com/SteggyDev/Steggy
    ```
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```sh
@@ -124,8 +124,8 @@ Run the bash:
 <summary>Contributor Graph</summary>
 <br>
 <p align="left">
-   <a href="https://github.com{/unknownman77/Steggy/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=unknownman77/Steggy">
+   <a href="https://github.com{/SteggyDev/Steggy/}graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=SteggyDev/Steggy">
    </a>
 </p>
 </details>
